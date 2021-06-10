@@ -1,0 +1,10 @@
+<h2>Mi nombre es: {{ nombre }} y mi edad es: {{ edades.yo }} </h2>
+<h2>El nombre mas bonito del mundo es: {{ nombrebonito }} y su edad es: {{ edades.ella }}</h2>
+
+<div>
+  <span>Mi Edad: </span>
+  <input type="text" [placeholder]="pholder" (change)="acciones[2].accion()" [(ngModel)]="edades.yo">
+</div>
+
+<button *ngFor="let accion of acciones" (click)="accion.accion()"> {{ accion.nombre }} </button>
+<app-fibolista [valores]="valores"></app-fibolista>

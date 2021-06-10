@@ -1,0 +1,3 @@
+<div *ngFor="let valor of valores; let i=index">
+  <span [class.owo]="i%2 == 0">{{ i + " - " + fservice.fibo(valor) }}</span>
+</div>
